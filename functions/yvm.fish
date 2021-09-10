@@ -120,7 +120,7 @@ function _yvm_postinstall -d "Write version to file and modify fish_user_paths"
     echo $version_to_install >$yvm_fish_data/version
 
     if not contains -- "$yvm_fish_data/$version_to_install/bin" $fish_user_paths
-        set -U fish_user_paths "$yvm_fish_data/$version_to_install/bin" $fish_user_paths
+        set -g fish_user_paths "$yvm_fish_data/$version_to_install/bin" $fish_user_paths
     end
 end
 
